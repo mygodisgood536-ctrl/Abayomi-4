@@ -1,95 +1,72 @@
 /* QATAVEL Design System
-   Selected palette: Deep Teal / Professional Fintech
-   Primary: #0F969C | Deep: #05161A | Accent: #6DA5C0
+   Redesigned to match the calm, airy Bolt direction
+   Soft sage backgrounds, charcoal primary, pastel role cards
 */
 
 :root {
-  /* Brand */
-  --q-primary: #0F969C;
-  --q-primary-hover: #0C7075;
-  --q-primary-light: #6DA5C0;
-  --q-primary-dark: #072E33;
-  --q-deep: #05161A;
-  --q-surface: #0A1F24;
-  --q-surface-elevated: #0F2A30;
+  /* Brand / Core */
+  --q-primary: #2F3A36;          /* deep charcoal-green (main buttons & text) */
+  --q-primary-hover: #1F2824;
+  --q-accent: #5B8A7A;           /* soft sage accent */
+  --q-accent-soft: #A8C5B5;
+  --q-highlight: #7A9E8E;        /* for "one clear" style highlights */
 
-  /* Neutrals */
-  --q-bg: #05161A;
-  --q-bg-soft: #072E33;
-  --q-card: #0C1F24;
-  --q-border: #1A3A42;
-  --q-border-light: #294D61;
+  /* Backgrounds */
+  --q-bg: #F7F9F6;               /* main page background */
+  --q-bg-soft: #EEF2EE;
+  --q-surface: #FFFFFF;
+  --q-card: #FFFFFF;
+  --q-card-muted: #F3F6F3;
+
+  /* Pastel role / section colors (from the reference) */
+  --q-pastel-blue: #C5DCE0;
+  --q-pastel-mint: #D4EDE0;
+  --q-pastel-peach: #F3E4D4;
+  --q-pastel-sage: #E2EDE6;
+  --q-dark-card: #2F3A36;
+
+  /* Borders */
+  --q-border: #E2E8E2;
+  --q-border-light: #EDF1ED;
 
   /* Text */
-  --q-text: #E8F4F5;
-  --q-text-muted: #8BA8B0;
-  --q-text-dim: #5A7A82;
-  --q-text-inverse: #05161A;
+  --q-text: #2F3A36;
+  --q-text-muted: #7D897F;
+  --q-text-dim: #A0ABA3;
+  --q-text-inverse: #FFFFFF;
 
   /* Semantic */
-  --q-success: #10B981;
-  --q-warning: #F59E0B;
-  --q-danger: #EF4444;
-  --q-info: #3B82F6;
+  --q-success: #3D9B6E;
+  --q-warning: #D4A017;
+  --q-danger: #C45C5C;
+  --q-info: #5B8FA8;
 
-  /* Status badges */
-  --q-active: #10B981;
-  --q-pending: #F59E0B;
-  --q-failed: #EF4444;
-  --q-inactive: #6B7280;
-
-  /* Spacing scale */
-  --space-1: 0.25rem;
-  --space-2: 0.5rem;
-  --space-3: 0.75rem;
-  --space-4: 1rem;
-  --space-5: 1.25rem;
-  --space-6: 1.5rem;
-  --space-8: 2rem;
-  --space-10: 2.5rem;
-  --space-12: 3rem;
-  --space-16: 4rem;
+  /* Status */
+  --q-active: #3D9B6E;
+  --q-pending: #D4A017;
+  --q-failed: #C45C5C;
+  --q-inactive: #A0ABA3;
 
   /* Radius */
-  --radius-sm: 6px;
-  --radius-md: 10px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
   --radius-lg: 16px;
   --radius-xl: 24px;
+  --radius-2xl: 32px;
   --radius-full: 9999px;
 
-  /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0,0,0,0.4);
-  --shadow-md: 0 4px 12px rgba(0,0,0,0.35);
-  --shadow-lg: 0 12px 32px rgba(0,0,0,0.45);
-  --shadow-glow: 0 0 24px rgba(15,150,156,0.25);
+  /* Soft shadows (light theme) */
+  --shadow-sm: 0 1px 3px rgba(47, 58, 54, 0.06);
+  --shadow-md: 0 4px 16px rgba(47, 58, 54, 0.07);
+  --shadow-lg: 0 12px 40px rgba(47, 58, 54, 0.09);
+  --shadow-card: 0 8px 30px rgba(47, 58, 54, 0.06);
 
   /* Typography */
-  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-display: 'Inter', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
-  /* Transitions */
+  /* Motion */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
   --duration-fast: 150ms;
-  --duration-normal: 250ms;
-  --duration-slow: 400ms;
-}
-
-/* Light mode overrides (for company settings) */
-[data-theme="light"] {
-  --q-bg: #F5F9FA;
-  --q-bg-soft: #E8F1F3;
-  --q-card: #FFFFFF;
-  --q-surface: #FFFFFF;
-  --q-surface-elevated: #F0F7F8;
-  --q-border: #D0E2E6;
-  --q-border-light: #B8D0D6;
-  --q-text: #0A1F24;
-  --q-text-muted: #4A6A72;
-  --q-text-dim: #7A9AA2;
-  --q-text-inverse: #FFFFFF;
-  --shadow-sm: 0 1px 2px rgba(5,22,26,0.06);
-  --shadow-md: 0 4px 12px rgba(5,22,26,0.08);
-  --shadow-lg: 0 12px 32px rgba(5,22,26,0.12);
+  --duration-normal: 280ms;
+  --duration-slow: 450ms;
 }

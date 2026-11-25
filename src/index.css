@@ -2,20 +2,22 @@
 @import "./styles/design-tokens.css";
 
 @theme {
-  --color-q-primary: #0F969C;
-  --color-q-primary-hover: #0C7075;
-  --color-q-primary-light: #6DA5C0;
-  --color-q-primary-dark: #072E33;
-  --color-q-deep: #05161A;
-  --color-q-surface: #0A1F24;
-  --color-q-bg: #05161A;
-  --color-q-card: #0C1F24;
-  --color-q-border: #1A3A42;
-  --color-q-text: #E8F4F5;
-  --color-q-muted: #8BA8B0;
-  --color-q-success: #10B981;
-  --color-q-warning: #F59E0B;
-  --color-q-danger: #EF4444;
+  --color-q-primary: #2F3A36;
+  --color-q-primary-hover: #1F2824;
+  --color-q-accent: #5B8A7A;
+  --color-q-bg: #F7F9F6;
+  --color-q-surface: #FFFFFF;
+  --color-q-card: #FFFFFF;
+  --color-q-border: #E2E8E2;
+  --color-q-text: #2F3A36;
+  --color-q-muted: #7D897F;
+  --color-q-success: #3D9B6E;
+  --color-q-warning: #D4A017;
+  --color-q-danger: #C45C5C;
+  --color-q-pastel-blue: #C5DCE0;
+  --color-q-pastel-mint: #D4EDE0;
+  --color-q-pastel-peach: #F3E4D4;
+  --color-q-dark: #2F3A36;
 }
 
 * {
@@ -39,7 +41,7 @@ body {
   min-height: 100vh;
 }
 
-/* Custom scrollbar */
+/* Soft scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -48,14 +50,13 @@ body {
   background: var(--q-bg-soft);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--q-border-light);
+  background: #C5D0C8;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--q-primary);
+  background: #A8B5AC;
 }
 
-/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

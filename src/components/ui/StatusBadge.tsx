@@ -1,22 +1,22 @@
 import { cn } from '../../utils/cn'
 
 const styles: Record<string, string> = {
-  active: 'bg-[#10B981]/15 text-[#10B981]',
-  healthy: 'bg-[#10B981]/15 text-[#10B981]',
-  connected: 'bg-[#10B981]/15 text-[#10B981]',
-  suspended: 'bg-[#F59E0B]/15 text-[#F59E0B]',
-  warning: 'bg-[#F59E0B]/15 text-[#F59E0B]',
-  pending: 'bg-[#F59E0B]/15 text-[#F59E0B]',
-  RETRYING: 'bg-[#F59E0B]/15 text-[#F59E0B]',
-  deactivated: 'bg-[#EF4444]/15 text-[#EF4444]',
-  critical: 'bg-[#EF4444]/15 text-[#EF4444]',
-  failed: 'bg-[#EF4444]/15 text-[#EF4444]',
-  FAILED: 'bg-[#EF4444]/15 text-[#EF4444]',
-  CREATED: 'bg-[#10B981]/15 text-[#10B981]',
-  AWAITING_ALLOCATION: 'bg-[#F59E0B]/15 text-[#F59E0B]',
-  POSTED: 'bg-[#10B981]/15 text-[#10B981]',
-  ACTIVE: 'bg-[#10B981]/15 text-[#10B981]',
-  COMPLETED: 'bg-[#6DA5C0]/15 text-[#6DA5C0]',
+  active: 'bg-[#3D9B6E]/12 text-[#3D9B6E]',
+  healthy: 'bg-[#3D9B6E]/12 text-[#3D9B6E]',
+  connected: 'bg-[#3D9B6E]/12 text-[#3D9B6E]',
+  suspended: 'bg-[#D4A017]/12 text-[#D4A017]',
+  warning: 'bg-[#D4A017]/12 text-[#D4A017]',
+  pending: 'bg-[#D4A017]/12 text-[#D4A017]',
+  RETRYING: 'bg-[#D4A017]/12 text-[#D4A017]',
+  deactivated: 'bg-[#C45C5C]/12 text-[#C45C5C]',
+  critical: 'bg-[#C45C5C]/12 text-[#C45C5C]',
+  failed: 'bg-[#C45C5C]/12 text-[#C45C5C]',
+  FAILED: 'bg-[#C45C5C]/12 text-[#C45C5C]',
+  CREATED: 'bg-[#3D9B6E]/12 text-[#3D9B6E]',
+  AWAITING_ALLOCATION: 'bg-[#D4A017]/12 text-[#D4A017]',
+  POSTED: 'bg-[#3D9B6E]/12 text-[#3D9B6E]',
+  ACTIVE: 'bg-[#3D9B6E]/12 text-[#3D9B6E]',
+  COMPLETED: 'bg-[#5B8FA8]/12 text-[#5B8FA8]',
 }
 
 export function StatusBadge({ status, className }: { status: string; className?: string }) {
@@ -24,7 +24,7 @@ export function StatusBadge({ status, className }: { status: string; className?:
     <span
       className={cn(
         'inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium capitalize',
-        styles[status] ?? 'bg-[#5A7A82]/20 text-[#8BA8B0]',
+        styles[status] ?? 'bg-[#A0ABA3]/15 text-[#7D897F]',
         className
       )}
     >

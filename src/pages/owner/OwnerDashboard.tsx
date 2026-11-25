@@ -24,15 +24,15 @@ function Sidebar() {
   ]
 
   return (
-    <aside className="w-64 shrink-0 border-r border-[#1A3A42] bg-[#05161A] flex flex-col h-screen sticky top-0">
-      <div className="p-5 border-b border-[#1A3A42]">
+    <aside className="w-64 shrink-0 border-r border-[#E2E8E2] bg-white border-r border-[#E2E8E2] flex flex-col h-screen sticky top-0">
+      <div className="p-5 border-b border-[#E2E8E2]">
         <Link to="/" className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#0F969C] to-[#6DA5C0] flex items-center justify-center font-bold text-xs text-[#05161A]">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#0F969C] to-[#6DA5C0] flex items-center justify-center font-bold text-xs text-white">
             Q
           </div>
           <div>
             <div className="font-semibold text-sm">QATAVEL</div>
-            <div className="text-[10px] text-[#5A7A82] uppercase tracking-wider">Infrastructure</div>
+            <div className="text-[10px] text-[#A0ABA3] uppercase tracking-wider">Infrastructure</div>
           </div>
         </Link>
       </div>
@@ -48,8 +48,8 @@ function Sidebar() {
               to={item.to}
               className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all ${
                 active
-                  ? 'bg-[#0F969C]/15 text-[#0F969C]'
-                  : 'text-[#8BA8B0] hover:bg-[#0A1F24] hover:text-[#E8F4F5]'
+                  ? 'bg-[#2F3A36]/15 text-[#2F3A36]'
+                  : 'text-[#7D897F] hover:bg-white hover:text-[#2F3A36]'
               }`}
             >
               <item.icon className="w-4.5 h-4.5" />
@@ -59,10 +59,10 @@ function Sidebar() {
         })}
       </nav>
 
-      <div className="p-3 border-t border-[#1A3A42]">
+      <div className="p-3 border-t border-[#E2E8E2]">
         <Link
           to="/dev"
-          className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-[#5A7A82] hover:text-[#8BA8B0] transition-colors"
+          className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-[#A0ABA3] hover:text-[#7D897F] transition-colors"
         >
           <LogOut className="w-4.5 h-4.5" />
           Exit to Dev Access
@@ -80,7 +80,7 @@ function OwnerOverview() {
     <div className="p-8">
       <div className="mb-8">
         <h1 className="text-2xl font-bold">Platform Overview</h1>
-        <p className="text-[#8BA8B0] text-sm mt-1">Infrastructure health and tenant summary</p>
+        <p className="text-[#7D897F] text-sm mt-1">Infrastructure health and tenant summary</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-5 mb-10">
@@ -94,23 +94,23 @@ function OwnerOverview() {
             key={card.label}
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            className="p-5 rounded-2xl border border-[#1A3A42] bg-[#0A1F24]"
+            className="p-5 rounded-2xl border border-[#E2E8E2] bg-white"
           >
-            <p className="text-sm text-[#8BA8B0] mb-1">{card.label}</p>
-            <p className={`text-3xl font-bold ${card.alert ? 'text-[#F59E0B]' : 'text-[#E8F4F5]'}`}>
+            <p className="text-sm text-[#7D897F] mb-1">{card.label}</p>
+            <p className={`text-3xl font-bold ${card.alert ? 'text-[#F59E0B]' : 'text-[#2F3A36]'}`}>
               {card.value}
             </p>
-            <p className="text-xs text-[#5A7A82] mt-1">{card.sub}</p>
+            <p className="text-xs text-[#A0ABA3] mt-1">{card.sub}</p>
           </motion.div>
         ))}
       </div>
 
-      <div className="rounded-2xl border border-[#1A3A42] bg-[#0A1F24] overflow-hidden">
-        <div className="px-6 py-4 border-b border-[#1A3A42] flex items-center justify-between">
+      <div className="rounded-2xl border border-[#E2E8E2] bg-white overflow-hidden">
+        <div className="px-6 py-4 border-b border-[#E2E8E2] flex items-center justify-between">
           <h2 className="font-semibold">Companies</h2>
           <Link
             to="/owner/companies"
-            className="text-sm text-[#0F969C] hover:underline flex items-center gap-1"
+            className="text-sm text-[#2F3A36] hover:underline flex items-center gap-1"
           >
             View all <ChevronRight className="w-4 h-4" />
           </Link>
@@ -127,8 +127,8 @@ function OwnerOverview() {
 
 function CompanyRow({ company }: { company: Company }) {
   const statusColor = {
-    active: 'bg-[#10B981]/15 text-[#10B981]',
-    suspended: 'bg-[#F59E0B]/15 text-[#F59E0B]',
+    active: 'bg-[#3D9B6E]/12 text-[#3D9B6E]',
+    suspended: 'bg-[#D4A017]/12 text-[#D4A017]',
     deactivated: 'bg-[#EF4444]/15 text-[#EF4444]',
   }[company.status]
 
@@ -141,20 +141,20 @@ function CompanyRow({ company }: { company: Company }) {
   return (
     <Link
       to={`/owner/companies/${company.id}`}
-      className="flex items-center gap-4 px-6 py-4 hover:bg-[#0C1F24] transition-colors"
+      className="flex items-center gap-4 px-6 py-4 hover:bg-[#F3F6F3] transition-colors"
     >
       <div className={`w-2.5 h-2.5 rounded-full ${healthColor}`} title={company.health} />
       <div className="flex-1 min-w-0">
         <div className="font-medium">{company.name}</div>
-        <div className="text-xs text-[#5A7A82]">{company.url}</div>
+        <div className="text-xs text-[#A0ABA3]">{company.url}</div>
       </div>
-      <div className="hidden sm:block text-sm text-[#8BA8B0]">
+      <div className="hidden sm:block text-sm text-[#7D897F]">
         {company.branchCount} branches · {company.workerCount} workers
       </div>
       <span className={`text-xs px-2.5 py-1 rounded-full font-medium ${statusColor}`}>
         {company.status}
       </span>
-      <ChevronRight className="w-4 h-4 text-[#5A7A82]" />
+      <ChevronRight className="w-4 h-4 text-[#A0ABA3]" />
     </Link>
   )
 }
@@ -173,11 +173,11 @@ function CompaniesList() {
       <div className="flex items-center justify-between mb-8">
         <div>
           <h1 className="text-2xl font-bold">Companies</h1>
-          <p className="text-[#8BA8B0] text-sm mt-1">All tenants on the platform</p>
+          <p className="text-[#7D897F] text-sm mt-1">All tenants on the platform</p>
         </div>
         <button
           onClick={() => setShowCreate(true)}
-          className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#0F969C] text-[#05161A] font-semibold text-sm hover:bg-[#6DA5C0] transition-colors"
+          className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#2F3A36] text-white font-semibold text-sm hover:bg-[#5B8A7A] transition-colors"
         >
           <Plus className="w-4 h-4" />
           Create company
@@ -185,22 +185,22 @@ function CompaniesList() {
       </div>
 
       <div className="relative mb-6">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#5A7A82]" />
+        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#A0ABA3]" />
         <input
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search companies…"
-          className="w-full max-w-md pl-10 pr-4 py-2.5 rounded-xl bg-[#0A1F24] border border-[#1A3A42] text-sm focus:outline-none focus:border-[#0F969C]"
+          className="w-full max-w-md pl-10 pr-4 py-2.5 rounded-xl bg-white border border-[#E2E8E2] text-sm focus:outline-none focus:border-[#2F3A36]/40"
         />
       </div>
 
-      <div className="rounded-2xl border border-[#1A3A42] bg-[#0A1F24] overflow-hidden">
+      <div className="rounded-2xl border border-[#E2E8E2] bg-white overflow-hidden">
         <div className="divide-y divide-[#1A3A42]">
           {filtered.map((c) => (
             <CompanyRow key={c.id} company={c} />
           ))}
           {filtered.length === 0 && (
-            <div className="px-6 py-12 text-center text-[#5A7A82]">
+            <div className="px-6 py-12 text-center text-[#A0ABA3]">
               No companies match your search
             </div>
           )}
@@ -243,7 +243,7 @@ function CreateCompanyModal({ onClose }: { onClose: () => void }) {
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.95, opacity: 0 }}
         onClick={(e) => e.stopPropagation()}
-        className="w-full max-w-lg rounded-2xl border border-[#1A3A42] bg-[#0A1F24] p-6 shadow-2xl"
+        className="w-full max-w-lg rounded-2xl border border-[#E2E8E2] bg-white p-6 shadow-2xl"
       >
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-lg font-semibold">Create company</h2>
@@ -256,21 +256,21 @@ function CreateCompanyModal({ onClose }: { onClose: () => void }) {
           <div className="space-y-4">
             <div className="p-4 rounded-xl bg-[#10B981]/10 border border-[#10B981]/30">
               <p className="text-[#10B981] font-medium mb-1">Company created</p>
-              <p className="text-sm text-[#8BA8B0]">
+              <p className="text-sm text-[#7D897F]">
                 Provide the URL and temporary password to the company management.
               </p>
             </div>
             <div>
-              <p className="text-xs text-[#5A7A82] mb-1">Company URL</p>
-              <p className="font-mono text-sm bg-[#05161A] px-3 py-2 rounded-lg">{created.url}</p>
+              <p className="text-xs text-[#A0ABA3] mb-1">Company URL</p>
+              <p className="font-mono text-sm bg-[#F7F9F6] px-3 py-2 rounded-lg">{created.url}</p>
             </div>
             <div>
-              <p className="text-xs text-[#5A7A82] mb-1">Temporary password</p>
-              <p className="font-mono text-sm bg-[#05161A] px-3 py-2 rounded-lg">{created.password}</p>
+              <p className="text-xs text-[#A0ABA3] mb-1">Temporary password</p>
+              <p className="font-mono text-sm bg-[#F7F9F6] px-3 py-2 rounded-lg">{created.password}</p>
             </div>
             <button
               onClick={onClose}
-              className="w-full py-2.5 rounded-xl bg-[#0F969C] text-[#05161A] font-semibold text-sm"
+              className="w-full py-2.5 rounded-xl bg-[#2F3A36] text-white font-semibold text-sm"
             >
               Done
             </button>
@@ -278,48 +278,48 @@ function CreateCompanyModal({ onClose }: { onClose: () => void }) {
         ) : (
           <form onSubmit={handleCreate} className="space-y-4">
             <div>
-              <label className="block text-sm text-[#8BA8B0] mb-1">Company name *</label>
+              <label className="block text-sm text-[#7D897F] mb-1">Company name *</label>
               <input
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full px-3 py-2.5 rounded-xl bg-[#05161A] border border-[#1A3A42] text-sm focus:outline-none focus:border-[#0F969C]"
+                className="w-full px-3 py-2.5 rounded-xl bg-[#F7F9F6] border border-[#E2E8E2] text-sm focus:outline-none focus:border-[#2F3A36]/40"
                 placeholder="e.g. Horizon Microfinance"
               />
             </div>
             <div>
-              <label className="block text-sm text-[#8BA8B0] mb-1">Gmail address *</label>
+              <label className="block text-sm text-[#7D897F] mb-1">Gmail address *</label>
               <input
                 required
                 type="email"
                 value={gmail}
                 onChange={(e) => setGmail(e.target.value)}
-                className="w-full px-3 py-2.5 rounded-xl bg-[#05161A] border border-[#1A3A42] text-sm focus:outline-none focus:border-[#0F969C]"
+                className="w-full px-3 py-2.5 rounded-xl bg-[#F7F9F6] border border-[#E2E8E2] text-sm focus:outline-none focus:border-[#2F3A36]/40"
                 placeholder="admin@company.com"
               />
             </div>
             <div>
-              <label className="block text-sm text-[#8BA8B0] mb-1">Company address *</label>
+              <label className="block text-sm text-[#7D897F] mb-1">Company address *</label>
               <input
                 required
                 value={address}
                 onChange={(e) => setAddress(e.target.value)}
-                className="w-full px-3 py-2.5 rounded-xl bg-[#05161A] border border-[#1A3A42] text-sm focus:outline-none focus:border-[#0F969C]"
+                className="w-full px-3 py-2.5 rounded-xl bg-[#F7F9F6] border border-[#E2E8E2] text-sm focus:outline-none focus:border-[#2F3A36]/40"
                 placeholder="Full address"
               />
             </div>
             <div>
-              <label className="block text-sm text-[#8BA8B0] mb-1">Domain (optional)</label>
+              <label className="block text-sm text-[#7D897F] mb-1">Domain (optional)</label>
               <input
                 value={domain}
                 onChange={(e) => setDomain(e.target.value)}
-                className="w-full px-3 py-2.5 rounded-xl bg-[#05161A] border border-[#1A3A42] text-sm focus:outline-none focus:border-[#0F969C]"
+                className="w-full px-3 py-2.5 rounded-xl bg-[#F7F9F6] border border-[#E2E8E2] text-sm focus:outline-none focus:border-[#2F3A36]/40"
                 placeholder="Leave blank for *.qatavel.app"
               />
             </div>
             <button
               type="submit"
-              className="w-full py-2.5 rounded-xl bg-[#0F969C] text-[#05161A] font-semibold text-sm hover:bg-[#6DA5C0] transition-colors"
+              className="w-full py-2.5 rounded-xl bg-[#2F3A36] text-white font-semibold text-sm hover:bg-[#5B8A7A] transition-colors"
             >
               Create company
             </button>
@@ -338,7 +338,7 @@ function CompanyDetail() {
     <div className="p-8">
       <button
         onClick={() => navigate('/owner/companies')}
-        className="text-sm text-[#8BA8B0] hover:text-[#0F969C] mb-6 flex items-center gap-1"
+        className="text-sm text-[#7D897F] hover:text-[#2F3A36] mb-6 flex items-center gap-1"
       >
         ← Back to companies
       </button>
@@ -346,7 +346,7 @@ function CompanyDetail() {
       <div className="flex items-start justify-between mb-8">
         <div>
           <h1 className="text-2xl font-bold">{company.name}</h1>
-          <p className="text-[#8BA8B0] text-sm mt-1">{company.url}</p>
+          <p className="text-[#7D897F] text-sm mt-1">{company.url}</p>
         </div>
         <div className="flex gap-2">
           <button className="flex items-center gap-2 px-3 py-2 rounded-lg border border-[#F59E0B]/40 text-[#F59E0B] text-sm hover:bg-[#F59E0B]/10">
@@ -362,28 +362,28 @@ function CompanyDetail() {
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-        <div className="p-4 rounded-xl border border-[#1A3A42] bg-[#0A1F24]">
-          <p className="text-xs text-[#5A7A82]">Branches</p>
+        <div className="p-4 rounded-xl border border-[#E2E8E2] bg-white">
+          <p className="text-xs text-[#A0ABA3]">Branches</p>
           <p className="text-2xl font-bold">{company.branchCount}</p>
         </div>
-        <div className="p-4 rounded-xl border border-[#1A3A42] bg-[#0A1F24]">
-          <p className="text-xs text-[#5A7A82]">Workers (BM + CO)</p>
+        <div className="p-4 rounded-xl border border-[#E2E8E2] bg-white">
+          <p className="text-xs text-[#A0ABA3]">Workers (BM + CO)</p>
           <p className="text-2xl font-bold">{company.workerCount}</p>
         </div>
-        <div className="p-4 rounded-xl border border-[#1A3A42] bg-[#0A1F24]">
-          <p className="text-xs text-[#5A7A82]">Status</p>
+        <div className="p-4 rounded-xl border border-[#E2E8E2] bg-white">
+          <p className="text-xs text-[#A0ABA3]">Status</p>
           <p className="text-lg font-semibold capitalize">{company.status}</p>
         </div>
-        <div className="p-4 rounded-xl border border-[#1A3A42] bg-[#0A1F24]">
-          <p className="text-xs text-[#5A7A82]">Health</p>
+        <div className="p-4 rounded-xl border border-[#E2E8E2] bg-white">
+          <p className="text-xs text-[#A0ABA3]">Health</p>
           <p className="text-lg font-semibold capitalize">{company.health}</p>
         </div>
       </div>
 
-      <div className="p-5 rounded-2xl border border-[#1A3A42] bg-[#0A1F24]">
-        <p className="text-sm text-[#8BA8B0]">
+      <div className="p-5 rounded-2xl border border-[#E2E8E2] bg-white">
+        <p className="text-sm text-[#7D897F]">
           As Infrastructure Owner you see company structure and health only.
-          You do <strong className="text-[#E8F4F5]">not</strong> see customer data, loans, payments or money movement.
+          You do <strong className="text-[#2F3A36]">not</strong> see customer data, loans, payments or money movement.
         </p>
       </div>
     </div>
@@ -392,7 +392,7 @@ function CompanyDetail() {
 
 export default function OwnerDashboard() {
   return (
-    <div className="flex min-h-screen bg-[var(--q-deep)] text-[var(--q-text)]">
+    <div className="flex min-h-screen bg-[#F7F9F6] text-[var(--q-text)]">
       <Sidebar />
       <main className="flex-1 overflow-auto">
         <Routes>

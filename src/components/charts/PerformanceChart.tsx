@@ -28,23 +28,24 @@ export function PerformanceChart() {
         <AreaChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
           <defs>
             <linearGradient id="exp" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#6DA5C0" stopOpacity={0.3} />
-              <stop offset="95%" stopColor="#6DA5C0" stopOpacity={0} />
+              <stop offset="5%" stopColor="#7D897F" stopOpacity={0.2} />
+              <stop offset="95%" stopColor="#7D897F" stopOpacity={0} />
             </linearGradient>
             <linearGradient id="real" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#0F969C" stopOpacity={0.4} />
-              <stop offset="95%" stopColor="#0F969C" stopOpacity={0} />
+              <stop offset="5%" stopColor="#5B8A7A" stopOpacity={0.3} />
+              <stop offset="95%" stopColor="#5B8A7A" stopOpacity={0} />
             </linearGradient>
           </defs>
-          <CartesianGrid strokeDasharray="3 3" stroke="#1A3A42" />
-          <XAxis dataKey="day" stroke="#5A7A82" fontSize={12} tickLine={false} />
-          <YAxis stroke="#5A7A82" fontSize={12} tickFormatter={formatK} tickLine={false} axisLine={false} />
+          <CartesianGrid strokeDasharray="3 3" stroke="#E2E8E2" />
+          <XAxis dataKey="day" stroke="#A0ABA3" fontSize={12} tickLine={false} />
+          <YAxis stroke="#A0ABA3" fontSize={12} tickFormatter={formatK} tickLine={false} axisLine={false} />
           <Tooltip
             contentStyle={{
-              background: '#0A1F24',
-              border: '1px solid #1A3A42',
+              background: '#FFFFFF',
+              border: '1px solid #E2E8E2',
               borderRadius: 12,
               fontSize: 13,
+              boxShadow: '0 4px 16px rgba(47,58,54,0.08)',
             }}
             formatter={(value: number) => [`₦${value.toLocaleString()}`, '']}
           />
@@ -53,7 +54,7 @@ export function PerformanceChart() {
             type="monotone"
             dataKey="expected"
             name="Expected"
-            stroke="#6DA5C0"
+            stroke="#7D897F"
             fill="url(#exp)"
             strokeWidth={2}
           />
@@ -61,7 +62,7 @@ export function PerformanceChart() {
             type="monotone"
             dataKey="realised"
             name="Realised"
-            stroke="#0F969C"
+            stroke="#5B8A7A"
             fill="url(#real)"
             strokeWidth={2}
           />
