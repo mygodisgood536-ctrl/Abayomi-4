@@ -1,5 +1,5 @@
 import { cn } from '../../utils/cn'
-import { HTMLAttributes } from 'react'
+import { type HTMLAttributes } from 'react'
 
 export function Card({ className, children, ...props }: HTMLAttributes<HTMLDivElement>) {
   return (

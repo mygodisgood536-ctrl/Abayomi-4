@@ -1,16 +1,14 @@
 import { useState } from 'react'
-import { Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom'
+import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   LayoutDashboard,
   GitBranch,
-  Users,
   Activity,
   Settings,
   LogOut,
   Plus,
   ChevronRight,
-  Search,
   X,
   CreditCard,
   AlertTriangle,
@@ -27,7 +25,7 @@ import {
   formatNaira,
   formatPct,
 } from '../../data/mock'
-import type { Branch, Worker } from '../../types'
+import type { Branch } from '../../types'
 import { PerformanceChart } from '../../components/charts/PerformanceChart'
 
 function CompanySidebar() {

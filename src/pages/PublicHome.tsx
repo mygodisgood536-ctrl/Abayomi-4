@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import {
@@ -31,7 +31,7 @@ export default function PublicHome() {
   })
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0])
   const scale = useTransform(scrollYProgress, [0, 0.8], [1, 1.1])
-  const [videoReady, setVideoReady] = useState(false)
+  
 
   useEffect(() => {
     document.title = 'QATAVEL — The infrastructure behind smarter lending'

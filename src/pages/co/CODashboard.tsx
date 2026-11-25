@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom'
+import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   LayoutDashboard,
@@ -13,10 +13,10 @@ import {
   ChevronRight,
   Camera,
   CheckCircle2,
-  AlertCircle,
   X,
 } from 'lucide-react'
 import DisbursementConfirm from "./DisbursementConfirm"
+import { SavingsLoanHistory } from "../../components/co/SavingsLoanHistory"
 import {
   mockGroups,
   mockCustomers,
@@ -24,7 +24,6 @@ import {
   mockReceipts,
   mockNotifications,
   formatNaira,
-  formatPct,
 } from '../../data/mock'
 
 function COSidebar() {

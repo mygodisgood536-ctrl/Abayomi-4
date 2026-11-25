@@ -5,21 +5,18 @@ import {
   LayoutDashboard,
   Building2,
   Plus,
-  Activity,
   LogOut,
   Search,
-  MoreVertical,
   Ban,
   Pause,
   Play,
-  ExternalLink,
   ChevronRight,
   X,
 } from 'lucide-react'
-import { mockCompanies, formatNaira } from '../../data/mock'
+import { mockCompanies } from '../../data/mock'
 import type { Company } from '../../types'
 
-function Sidebar({ collapsed }: { collapsed?: boolean }) {
+function Sidebar() {
   const location = useLocation()
   const nav = [
     { to: '/owner', label: 'Overview', icon: LayoutDashboard, exact: true },
