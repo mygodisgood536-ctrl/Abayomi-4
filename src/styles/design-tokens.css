@@ -1,0 +1,95 @@
+/* QATAVEL Design System
+   Selected palette: Deep Teal / Professional Fintech
+   Primary: #0F969C | Deep: #05161A | Accent: #6DA5C0
+*/
+
+:root {
+  /* Brand */
+  --q-primary: #0F969C;
+  --q-primary-hover: #0C7075;
+  --q-primary-light: #6DA5C0;
+  --q-primary-dark: #072E33;
+  --q-deep: #05161A;
+  --q-surface: #0A1F24;
+  --q-surface-elevated: #0F2A30;
+
+  /* Neutrals */
+  --q-bg: #05161A;
+  --q-bg-soft: #072E33;
+  --q-card: #0C1F24;
+  --q-border: #1A3A42;
+  --q-border-light: #294D61;
+
+  /* Text */
+  --q-text: #E8F4F5;
+  --q-text-muted: #8BA8B0;
+  --q-text-dim: #5A7A82;
+  --q-text-inverse: #05161A;
+
+  /* Semantic */
+  --q-success: #10B981;
+  --q-warning: #F59E0B;
+  --q-danger: #EF4444;
+  --q-info: #3B82F6;
+
+  /* Status badges */
+  --q-active: #10B981;
+  --q-pending: #F59E0B;
+  --q-failed: #EF4444;
+  --q-inactive: #6B7280;
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.4);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.35);
+  --shadow-lg: 0 12px 32px rgba(0,0,0,0.45);
+  --shadow-glow: 0 0 24px rgba(15,150,156,0.25);
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+}
+
+/* Light mode overrides (for company settings) */
+[data-theme="light"] {
+  --q-bg: #F5F9FA;
+  --q-bg-soft: #E8F1F3;
+  --q-card: #FFFFFF;
+  --q-surface: #FFFFFF;
+  --q-surface-elevated: #F0F7F8;
+  --q-border: #D0E2E6;
+  --q-border-light: #B8D0D6;
+  --q-text: #0A1F24;
+  --q-text-muted: #4A6A72;
+  --q-text-dim: #7A9AA2;
+  --q-text-inverse: #FFFFFF;
+  --shadow-sm: 0 1px 2px rgba(5,22,26,0.06);
+  --shadow-md: 0 4px 12px rgba(5,22,26,0.08);
+  --shadow-lg: 0 12px 32px rgba(5,22,26,0.12);
+}
