@@ -8,7 +8,6 @@ import {
   Wallet,
   Shield,
   BarChart3,
-  Smartphone,
   Play,
   CheckCircle2,
 } from 'lucide-react'
